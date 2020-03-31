@@ -50,5 +50,6 @@ export default {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: 5px;
   padding: 20px;
+  width: 100%;
 }
 </style>

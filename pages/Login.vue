@@ -1,7 +1,10 @@
 <template>
   <div class="login-page">
     <loader v-if="isVerifyingUser" />
-    <div class="login-form">
+    <div
+      v-if="!isLoggedIn"
+      class="login-form"
+    >
       <text-field
         v-model="user.email"
         :type="'email'"
@@ -73,7 +76,11 @@ export default {
     },
   },
   mounted () {
-    this.verifyUserLoginStatus(true);
+    if (this.isLoggedIn) {
+      this.$router.replace({ name: 'Home' });
+    } else {
+      this.verifyUserLoginStatus(true);
+    }
   },
   methods: {
     ...mapActions({

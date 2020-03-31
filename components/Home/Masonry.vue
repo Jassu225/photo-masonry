@@ -39,3 +39,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.masonry-custom {
+  width: 100%;
+  height: calc(100% - 60px);
+  overflow: auto;
+}
+</style>

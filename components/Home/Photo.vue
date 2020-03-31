@@ -3,10 +3,7 @@
     class="photo"
     :style="{ 'grid-row-end': elRowSpan }"
   >
-    <div
-      ref="contentEl"
-      class="photo-content"
-    >
+    <div class="photo-content">
       <img
         v-lazy="lazyImgOptions"
         :alt="photo.title"
@@ -65,9 +62,11 @@ export default {
   methods: {
     calculateContentHeight (val) {
       this.$nextTick(() => {
-        const contentEl = this.$refs.contentEl;
-        this.contentElHeight = contentEl.getBoundingClientRect().height;
-        // console.log(val);
+        this.$nextTick(() => {
+          const contentEl = this.$el.querySelector('.photo-content');
+          this.contentElHeight = contentEl.getBoundingClientRect().height;
+          // console.log(val);
+        });
       });
     },
   },

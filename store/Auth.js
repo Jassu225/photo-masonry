@@ -55,10 +55,16 @@ export const actions = {
       isSilentLogin: isSilentLogin || false,
     });
   },
+
+  logout ({ commit }) {
+    window.localStorage.removeItem('user');
+    commit('SET_AUTHENTICATION_STATUS', authenticationStatuses.loggedOut);
+  },
 };
 
 export const getters = {
   isLoggedIn: state => state.authenticationStatus === authenticationStatuses.loggedIn,
   isVerifyingUser: state => state.isVerifyingUser,
   isLoginFailed: state => state.authenticationStatus === authenticationStatuses.authenticationFailed,
+  isLoggedOut: state => state.authenticationStatus === authenticationStatuses.loggedOut,
 };
