@@ -9,7 +9,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { name: 'url', property: 'og:url', content: 'https://photo-masonry.herokuapp.com/' },
+      { name: 'title', property: 'og:title', content: 'nuxt-masonry' },
+      { property: 'og:type', content: 'website' },
+      { name: 'description', property: 'og:description', content: process.env.npm_package_description || '' },
+      { name: 'image', property: 'og:image', content: '/og-image-linkedin.png' },
+      { name: 'author', content: 'Jaswanth Sai Sattenapalli (jaswanthsaisattenapalli@gmail.com)' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
