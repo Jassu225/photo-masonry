@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-import authenticationStatuses from '~/data/constants';
+import { authStatuses as authenticationStatuses } from '~/data/constants';
 
 const users = {
   'admin@gmail.com': 'admin123',
