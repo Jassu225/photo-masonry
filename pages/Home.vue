@@ -34,7 +34,8 @@ export default {
       isFetchingPhotosSuccessful: 'Home/isFetchingPhotosSuccessful',
     }),
     showLoader () {
-      return !this.isLoggedIn || this.isVerifyingUser || this.isFetchingPhotos;
+      // return !this.isLoggedIn || this.isVerifyingUser || this.isFetchingPhotos;
+      return this.isFetchingPhotos;
     },
   },
   watch: {
@@ -55,11 +56,13 @@ export default {
     }
   },
   mounted () {
-    if (!this.isLoggedIn) {
-      this.verifyUserLoginStatus();
-    } else {
-      this.fetchPhotos();
-    }
+    // TODO: enable login later
+    // if (!this.isLoggedIn) {
+    //   this.verifyUserLoginStatus();
+    // } else {
+    //   this.fetchPhotos();
+    // }
+    this.fetchPhotos();
   },
   methods: {
     ...mapActions({

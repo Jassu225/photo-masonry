@@ -1,15 +1,21 @@
 <template>
   <div class="header">
-    <span>
+    <div class="header-title">
       Photo Masonry
-    </span>
-    <button
+    </div>
+    <div class="flickr-branding">
+      Powered By
+      <a href="https://www.flickr.com" target="_blank" tabindex="1" class="flickr-link">
+        <img src="/images/flickr-logo.png" alt="flickr logo" class="flickr-logo">
+      </a>
+    </div>
+    <!-- <button
       type="button"
       class="logout-btn"
       @click="initiateLogOut"
     >
       Logout
-    </button>
+    </button> -->
   </div>
 </template>
 
@@ -28,14 +34,26 @@ export default {
 <style lang="scss" scoped>
 .header {
   height: 60px;
-  line-height: 40px;
   padding: 10px;
   padding-left: 20px;
   width: 100%;
   box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.4);
-  span {
+  display: flex;
+  align-items: center;
+  .header-title {
     font-size: 20px;
     font-weight: 600;
+    flex: 1 0 auto;
+  }
+  .flickr-branding {
+    display: flex;
+    align-items: center;
+    .flickr-link {
+      .flickr-logo {
+        width: 76px;
+        padding: 0.5rem;
+      }
+    }
   }
   .logout-btn {
     float: right;
