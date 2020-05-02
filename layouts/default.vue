@@ -4,6 +4,25 @@
   </div>
 </template>
 
+<script>
+import theme from '~/mixins/theme';
+
+export default {
+  name: 'DefaultLayout',
+  mixins: [theme],
+  head () {
+    return {
+      bodyAttrs: {
+        style: [
+          `background-color: ${this.theme.backgrounds.app}`,
+          `color: ${this.theme.textColors.app}`,
+        ].join(';'),
+      },
+    };
+  },
+};
+</script>
+
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

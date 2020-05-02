@@ -1,7 +1,7 @@
 <template>
   <div
     class="photo"
-    :style="{ 'grid-row-end': elRowSpan }"
+    :style="{ 'grid-row-end': elRowSpan, 'background-color': theme.backgrounds.card }"
   >
     <div class="photo-content">
       <img
@@ -16,8 +16,11 @@
 </template>
 
 <script>
+import theme from '~/mixins/theme';
+
 export default {
   name: 'Photo',
+  mixins: [theme],
   props: {
     photo: {
       type: Object,
