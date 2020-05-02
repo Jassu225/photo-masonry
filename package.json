@@ -1,7 +1,7 @@
 {
   "name": "nuxt-masonry",
   "version": "1.0.0",
-  "description": "Masonry layout of lazily loading photos created using Nuxt.js (Vue.js), CSS4 Grid",
+  "description": "Masonry layout of lazily loading photos created using Nuxt.js (Vue.js), CSS4 Grid and Flickr API with dark & light modes",
   "author": "jaswanthsaisattenapalli@gmail.com",
   "private": true,
   "scripts": {
